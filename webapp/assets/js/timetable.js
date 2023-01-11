@@ -3,6 +3,7 @@ timetable.addEventListener('submit',async(e) =>{
     e.preventDefault();
     e.stopPropagation();
 
+    console.log("running timetable.js");
 
     let response = await fetch('http://localhost:8080/demo-1.0-SNAPSHOT/api/employee/courseid', {
     method: 'POST',
@@ -15,8 +16,17 @@ timetable.addEventListener('submit',async(e) =>{
 });
 try {
     let result = await response.json();
-    
-    
+    console.log(result);
+    console.log(result.length);
+    console.log(result[0]);
+    let name=[]
+    let days=[]
+    let time=[]
+    for (let i=0;i<result.length;i++)
+    {
+        name.push(result[i]['course_name']);
+    }
+    console.log(name);
     localStorage.setItem("data",JSON.stringify(result));
 }
 catch (err){
