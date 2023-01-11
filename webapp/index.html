@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="" name="description">
+    <title>Signin AcademicERP</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .btn-xl {
+            background-color:red;
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 10px;
+            width:50%;
+        }
+        .form-control{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="bg-light ">
+<div class="container" style="text-align: center;background-color:aqua;">
+    <h1 style="color: rgb(0, 60, 255); margin-top:20px;"><b><i>Acadamia Student ERP</i></b></h1>
+    <img src="assets/images/edu.jpg"  style=" width:30%; height: 30%; margin-top: 30px;">
+    <form class="form-signin" id="login-validation">
+        <hr class="mb-4"/>
+
+
+        <h2 style="margin-bottom: 20px">Roll number(MT___)</h2>
+
+
+        <div class="container" style="width: 50%">
+            <div class="row">
+                <div class="col-md-12" style="width: 50%">
+
+                <input autofocus class="form-control" id="roll_number" placeholder="e.g MT2022105" required type="roll_number"> <!--roll number by Id roll_number-->
+                </div>
+
+                <div class="col-md-12" style="padding: 18px; width: 500%;color : yellow">
+                <button class="btn btn-xl btn-primary" id="submit-button" type="submit"  ><!-- button by Id submit-button-->
+                    Validate Roll
+                </button>
+                </div>
+                <div class="col-md-12" style="padding: 18px; width: 500% ;color : yellow">
+
+                    <button class="btn btn-xl btn-success" disabled id="spinner-button" style="display: none;"  type="submit">
+                        <span aria-hidden="true" class="spinner-border" role="status"></span>
+                        Validating (Please wait...)
+                    </button>
+
+                </div>
+                <div class="alert alert-warning col-md-12" id="login-alert" role="alert" style="display: none; padding: 18px">
+                    Roll Number Not Found!!!
+                </div>
+
+
+            </div>
+        </div>
+
+        <hr class="mb-4"/>
+
+    </form>
+</div>
+</body>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/login-validation.js"></script>
+<script src="assets/js/timetable.js"></script>
+</html>
